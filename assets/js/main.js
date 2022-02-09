@@ -13,12 +13,14 @@ $(function() {
         if (window.location.href === this.href) {
             return;
         }
-        // pageChange(this.href);
         history.pushState(null, null, this.href);
         changePage();
     });
 
-    window.addEventListener('popstate', changePage);
+    window.addEventListener('popstate', function() {
+        overlayOff();
+        changePage();
+    });
     $(".burger").on("click", overlayToggle);
 });
 
