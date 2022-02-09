@@ -149,7 +149,7 @@ main .about p, main .contact p {
   font-size: 1.2rem;
   width: 80%;
   margin: auto;
-  text-align: justify;
+  text-align: left;
 }
 
 main .about .skills, main .about .social, main .contact .skills, main .contact .social {
@@ -284,7 +284,7 @@ main .about a:hover, main .contact a:hover {
   }
 }
 
-@media only screen and (min-width: 1350px) {
+@media only screen and (min-width: 1400px) {
   main .about p, main .contact p {
     width: 60%;
   }
