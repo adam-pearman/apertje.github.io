@@ -1,0 +1,293 @@
+$primary-color: #cff1ef;
+$secondary-color: #000000;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    font-family: "ITC Bauhaus", Helvetica, sans-serif;
+    background: $primary-color;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+header {
+    width: 100vw;
+    height: 75px;
+    background-color: $secondary-color;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    z-index: 2;
+    .burger {
+        width: 30px;
+        height: 25px;
+        position: relative;
+        padding: 10px;
+        margin: 25.5px;
+        cursor: pointer;
+        div {
+            width: 100%;
+            height: 1px;
+            position: absolute;
+            left: 0;
+            background: $primary-color;
+        }
+        .top {
+            top: 0;
+        }
+        .center {
+            top: 50%;
+            margin-top: -1px;
+        }
+        .bottom {
+            bottom: 0;
+        }
+    }
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    padding-top: 75px;
+    display: block;
+    letter-spacing: 0.5rem;
+    .overlay {
+        position: fixed;
+        display: none;
+        overflow-y: hidden;
+        opacity: 0;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.92);
+        z-index: 1;
+        ul {
+            list-style-type: none;
+            margin: 0;
+            text-align: center;
+            letter-spacing: normal;
+            font-size: 3rem;
+            padding-top: 75px;
+        }
+        li{
+            padding: 20px 0px;   
+        }
+        a {
+            text-decoration: none;
+            color: $primary-color;
+        }
+        a:hover {
+            opacity: 0.55;
+        }
+    }
+    .container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: table;
+        overflow: hidden;
+    }
+    .copy {
+        width: 100%;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        h1 {
+            font-size: 2.25rem;
+            margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 1.2rem;
+        }
+    }
+    .about, .contact {
+        display: block;
+        h1, h2 {
+            font-size: 2.25rem;
+            margin: 50px 0 30px 0;
+            letter-spacing: 0.2rem;
+        }
+        p {
+            letter-spacing: normal;
+            font-family: Helvetica, sans-serif;
+            // font-weight: 700;
+            font-size: 1.2rem;
+            width: 80%;
+            margin: auto;
+            text-align: justify;
+        }
+        .skills, .social {
+            display: grid;
+            grid-auto-flow: row;
+            grid-auto-rows: 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            justify-content: center;
+            margin: 0 auto 50px auto;
+            li {
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                letter-spacing: normal;
+                padding: 0 0 10px 0;
+                i {
+                    font-size: 2rem;
+                    padding-bottom: 10px;
+                }
+                p {
+                    font-size: 1rem;
+                    padding: 0;
+                    margin: auto;
+                    text-align: center;
+                }
+                
+            }
+        }
+        .social {
+            grid-template-columns: 1fr 1fr 1fr;
+            width: 60%;
+            margin-top: 25px;
+            
+        }
+        a {
+            text-decoration: none;
+            color: $secondary-color;
+        }
+        a:hover {
+            opacity: 0.55;
+        }
+    }
+}
+
+@media only screen and (min-width: 420px) {
+    main {
+        .copy {
+            h1 {
+                font-size: 3rem;
+            }
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+        .about, .contact {
+            h1, h2 {
+                font-size: 3rem;
+            }
+            p {
+                width: 70%;
+            }
+            .skills {
+                width: 80%;
+            }
+            .social {
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    header {
+        width: 100px;
+        height: 100vh;
+        flex-direction: column;
+        position: fixed;
+        .burger {
+            margin-top: 30px;
+            margin-left: 35px;
+        }
+    }
+    main {
+        padding-top: 0;
+        padding-left: 100px;
+        letter-spacing: 1.5rem;
+        .overlay {
+            ul {
+                font-size: 4.5rem;
+                padding-left: 100px;
+                padding-top: 30px;
+            }
+        }
+        .copy {
+            h1 {
+                font-size: 4.5rem;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+        }
+        .about, .contact {
+            h1, h2 {
+                font-size: 3.5rem;
+                letter-spacing: 0.5rem;
+                margin-top: 75px;
+            }
+            p {
+                font-size: 1.5rem;
+                width: 80%;
+            }
+            .skills, .social {
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+                width: 90%;
+                li {
+                    i {
+                        font-size: 4rem;
+                    }
+                    p {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+            .social {
+                grid-template-columns: 1fr 1fr 1fr;
+                width: 40%;
+            }   
+        } 
+    }
+}
+
+@media only screen and (min-width: 1350px) {
+    main {
+        .about, .contact {
+            p {
+                width: 60%;
+            }
+            .skills {
+                width: 70%;
+            }
+            .social {
+                width: 40%;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1600px) {
+    main {
+        .about, .contact {
+            p {
+                width: 60%;
+            }
+            .skills {
+                width: 60%;
+            }
+            .social {
+                width: 30%;
+            }
+        }
+    }
+}

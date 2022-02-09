@@ -1,0 +1,6 @@
+@font-face {
+    font-family: "ITC Bauhaus"; 
+    src: url("Bauhaus W04 Medium.woff2") format("woff2"), 
+    url("Bauhaus W04 Medium.woff") format("woff"),
+    url("Bauhaus\ W04\ Medium.ttf") format("truetype");
+}
